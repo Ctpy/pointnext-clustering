@@ -248,6 +248,8 @@ def train_one_epoch(model, train_loader, optimizer, scheduler, epoch, cfg):
                 point_all = 4800
             elif npoints == 8192:
                 point_all = 8192
+            elif npoints == 512:
+                point_all = 512
             else:
                 raise NotImplementedError()
             if  points.size(1) < point_all:
